@@ -22,7 +22,7 @@ def process_folder(inp, out, together):
             with open(p) as infile:
                 for line in infile:
                     fout.write(line)
-            fout.write("\n<ARXIVFILESPLIT>")
+            fout.write("\n</ARXIVFILESPLIT>")
     fout.close()
 
 
