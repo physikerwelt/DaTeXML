@@ -15,7 +15,7 @@ def process_folder(inp, out, together):
             ["latexmlpost", "--format", "xhtml", "--cmml", "--pmml", "--mathtex",
              "--destination=" + dest + ".xhtml",
              "--splitnaming=id", "--nocrossref",
-             "--splitpath=//ltx:section | //ltx:subsection | //ltx:bibliography | //ltx:appendix | //ltx:index | //ltx:para",
+             "--splitpath=//ltx:section | //ltx:subsection | //ltx:bibliography | //ltx:appendix | //ltx:index",
              "--navigationtoc=none", "--dbfile=db.bd", "--nographicimages", "--nographicimages", dest])
         for p in glob.glob(fdir + "p*.xhtml"):
             fout.write("<ARXIVFILESPLIT Filename=\"" + p + "\">\n")
